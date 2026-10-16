@@ -38,7 +38,7 @@
         </form>
     </div>
 
-    <!-- AREA 2: BILIK SUARA (Sengaja disembunyikan di awal) -->
+    <!-- AREA 2: BILIK SUARA -->
     <div class="kandidat-container sembunyi" id="layar-voting">
         <div class="welcome-box">
             <p>Pemilih: <strong id="user-aktif">Nama Siswa</strong> (<span id="kelas-aktif">Kelas</span>)</p>
@@ -61,14 +61,13 @@
         </div>
     </div>
 
-    <!-- AREA 3: PANEL RAHASIA ADMIN (Hanya muncul jika password benar) -->
+    <!-- AREA 3: PANEL RAHASIA ADMIN -->
     <div class="hasil-container sembunyi" id="layar-admin">
         <div class="admin-header">
-            <h3>PANEL MONITORING ADMIN (REAL-TIME)</h3>
+            <h3>PANEL MONITORING ADMIN (REAL-TIME ONLINE)</h3>
             <button class="btn-tutup-admin" onclick="tutupPanelAdmin()">Keluar Panel</button>
         </div>
         
-        <!-- Grafis Perolehan Suara Paslon -->
         <div class="bar-hasil">
             <span class="label-paslon">Paslon 01:</span>
             <div class="progress-bg">
@@ -85,7 +84,6 @@
             <span class="angka-vote">(<span id="suara-02">0</span> Suara)</span>
         </div>
 
-        <!-- Tabel Log Audit: Daftar nama siapa saja yang sudah memilih -->
         <h4 style="margin-top: 30px; margin-bottom: 10px; text-align: left;">Daftar Log Pemilih (Audit):</h4>
         <table class="tabel-audit">
             <thead>
@@ -101,11 +99,15 @@
         </table>
     </div>
 
-    <!-- TOMBOL LOGIN ADMIN (Disembunyikan samar di pojok bawah halaman) -->
     <div class="admin-gate-wrapper">
         <button class="btn-admin-gate" onclick="aksesPanelAdmin()">🔑 Login Admin</button>
     </div>
 
+    <!-- SKRIP DEPENDENSI: Firebase SDK core & database versi 8 (Paling stabil untuk pemula) -->
+    <script src="https://gstatic.com"></script>
+    <script src="https://gstatic.com"></script>
+    
+    <!-- File logika buatan kita sendiri -->
     <script src="script.js"></script>
 </body>
 </html>
